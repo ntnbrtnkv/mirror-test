@@ -3,4 +3,4 @@ stages:
   
 Test:
   stage: test
-  script: echo 123
+  script: echo README.md
