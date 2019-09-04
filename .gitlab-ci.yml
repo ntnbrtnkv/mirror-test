@@ -1,7 +1,11 @@
 stages:
   - test
+  - yep
   
 Test:
   stage: test
   script: echo README.md
+
+staging:
+  stage: yep
   trigger: a.bortnikov/mirror-test-ci
