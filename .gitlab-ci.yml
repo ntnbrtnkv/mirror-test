@@ -1,0 +1,6 @@
+stage:
+  -test
+  
+Test:
+  stage: test
+  script: echo 123
