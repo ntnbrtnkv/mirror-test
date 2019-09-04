@@ -5,7 +5,13 @@ stages:
 Test:
   stage: test
   script: echo README.md
+  artifacts:
+    paths:
+      - README.md
+    expire_in: 2 hrs
 
 staging:
+  variables:
+    MY_JOB_ID: $CI_JOB_TOKEN
   stage: yep
   trigger: a.bortnikov/mirror-test-ci
