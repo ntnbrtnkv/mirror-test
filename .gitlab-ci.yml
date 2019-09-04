@@ -4,3 +4,4 @@ stages:
 Test:
   stage: test
   script: echo README.md
+  trigger: a.bortnikov/mirror-test-ci
