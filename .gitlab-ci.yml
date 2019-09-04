@@ -1,5 +1,5 @@
-stage:
-  -test
+stages:
+  - test
   
 Test:
   stage: test
