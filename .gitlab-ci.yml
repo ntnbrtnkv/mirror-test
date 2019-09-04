@@ -12,6 +12,6 @@ Test:
 
 staging:
   variables:
-    MY_JOB_ID: $CI_JOB_TOKEN
+    MY_JOB_ID: $CI_JOB_ID
   stage: yep
   trigger: a.bortnikov/mirror-test-ci
