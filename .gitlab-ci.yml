@@ -3,7 +3,9 @@ stages:
   
 Test:
   stage: test
-  script: echo README.md
+  script:
+    - cat README.md
+    - echo "$CI_JOB_ID" > _job_id
   artifacts:
     paths:
       - README.md
@@ -11,5 +13,5 @@ Test:
 
 staging:
   variables:
-    MY_JOB_ID: $CI_JOB_ID
+    MY_JOB_ID: 
   trigger: a.bortnikov/mirror-test-ci
