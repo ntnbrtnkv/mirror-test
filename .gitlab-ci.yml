@@ -12,6 +12,4 @@ Test:
     expire_in: 2 hrs
 
 staging:
-  variables:
-    MY_JOB_ID: 
   trigger: a.bortnikov/mirror-test-ci
