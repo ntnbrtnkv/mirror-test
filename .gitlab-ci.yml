@@ -12,4 +12,6 @@ Test:
     expire_in: 2 hrs
 
 staging:
+  variables:
+    REF_NAME: $CI_COMMIT_REF_NAME
   trigger: a.bortnikov/mirror-test-ci
