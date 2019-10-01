@@ -1,2 +1,2 @@
 # mirror-test
-test
+updated master
