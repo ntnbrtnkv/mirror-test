@@ -1,2 +1,2 @@
 # mirror-test
-updated master-gl2
+updated master-gh2
