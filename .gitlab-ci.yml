@@ -1,5 +1,6 @@
 stages:
   - test
+  - deploy
   
 Test:
   stage: test
@@ -11,7 +12,8 @@ Test:
       - README.md
     expire_in: 2 hrs
 
-staging:
+Deploy:
+  stage: deploy
   variables:
     REF_NAME: $CI_COMMIT_REF_NAME
   trigger: a.bortnikov/mirror-test-ci
