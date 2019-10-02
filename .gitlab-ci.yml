@@ -12,6 +12,4 @@ Deploy:
   stage: deploy
   variables:
     REF_NAME: $CI_COMMIT_REF_NAME
-  trigger: 
-    project: a.bortnikov/mirror-test-ci
-    strategy: depend
+  trigger: a.bortnikov/mirror-test-ci
