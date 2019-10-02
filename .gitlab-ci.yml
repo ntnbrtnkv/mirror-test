@@ -7,13 +7,10 @@ Test:
   script:
     - cat README.md
     - echo "$CI_JOB_ID" > _job_id
-  artifacts:
-    paths:
-      - README.md
-    expire_in: 2 hrs
 
 Deploy:
   stage: deploy
   variables:
     REF_NAME: $CI_COMMIT_REF_NAME
   trigger: a.bortnikov/mirror-test-ci
+  strategy: depend
