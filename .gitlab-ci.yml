@@ -1,12 +1,12 @@
 stages:
-  - test
+#  - test
   - deploy
   
-Test:
-  stage: test
-  script:
-    - cat README.md
-    - echo "$CI_JOB_ID" > _job_id
+#Test:
+#  stage: test
+#  script:
+#    - cat README.md
+#    - echo "$CI_JOB_ID" > _job_id
 
 Deploy:
   image: appropriate/curl
