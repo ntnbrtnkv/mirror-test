@@ -9,6 +9,7 @@ Test:
     - echo "$CI_JOB_ID" > _job_id
 
 Deploy:
+  image: byrnedo/alpine-curl
   stage: deploy
   variables:
     REF_NAME: $CI_COMMIT_REF_NAME
