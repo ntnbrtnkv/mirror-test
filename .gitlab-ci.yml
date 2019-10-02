@@ -12,4 +12,5 @@ Deploy:
   stage: deploy
   variables:
     REF_NAME: $CI_COMMIT_REF_NAME
-  trigger: a.bortnikov/mirror-test-ci
+  script:
+    - curl --request POST --form "token=$CI_JOB_TOKEN" --form ref=master http://gitlab.loc/api/v4/projects/1111/trigger/pipeline
