@@ -12,9 +12,9 @@ Deploy:
   image: appropriate/curl
   stage: deploy
   script:
-    - curl --request POST\
-            -k\
-            --form "token=$CI_JOB_TOKEN"\
-            --form ref=master\
-            --form "variables[REF_NAME]=$CI_COMMIT_REF_NAME"\
+    - curl --request POST
+            -k
+            --form "token=$CI_JOB_TOKEN"
+            --form ref=master
+            --form "variables[REF_NAME]=$CI_COMMIT_REF_NAME"
             https://gitlab.loc/api/v4/projects/1111/trigger/pipeline
