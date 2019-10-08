@@ -1,15 +1,5 @@
 stages:
-#  - test
   - deploy
-
-variables:
-  CI_PROJECT_ID: 1111
-
-#Test:
-#  stage: test
-#  script:
-#    - cat README.md
-#    - echo "$CI_JOB_ID" > _job_id
 
 Deploy:
   image: appropriate/curl
@@ -20,4 +10,4 @@ Deploy:
             --form "token=$CI_JOB_TOKEN"
             --form ref=master
             --form "variables[REF_NAME]=$CI_COMMIT_REF_NAME"
-            https://gitlab.loc/api/v4/projects/$CI_PROJECT_ID/trigger/pipeline
+            $PIPELINE_TRIGGER_URL
