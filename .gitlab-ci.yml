@@ -1,17 +1,13 @@
 stages:
-  - test
-  
-Test:
-  stage: test
-  script:
-    - cat README.md
-    - echo "$CI_JOB_ID" > _job_id
-  artifacts:
-    paths:
-      - README.md
-    expire_in: 2 hrs
+  - deploy
 
-staging:
-  variables:
-    REF_NAME: $CI_COMMIT_REF_NAME
-  trigger: a.bortnikov/mirror-test-ci
+Deploy:
+  image: appropriate/curl
+  stage: deploy
+  script:
+    - curl --request POST
+            -k
+            --form "token=$CI_JOB_TOKEN"
+            --form ref=master
+            --form "variables[REF_NAME]=$CI_COMMIT_REF_NAME"
+            $PIPELINE_TRIGGER_URL
