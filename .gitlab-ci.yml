@@ -4,10 +4,7 @@ stages:
 Deploy:
   image: appropriate/curl
   stage: deploy
+  variables:
+    - TEST: $CI_COMMIT_TAG
   script:
-    - curl --request POST
-            -k
-            --form "token=$CI_JOB_TOKEN"
-            --form ref=master
-            --form "variables[REF_NAME]=$CI_COMMIT_REF_NAME"
-            $PIPELINE_TRIGGER_URL
+    - echo "$TEST"
