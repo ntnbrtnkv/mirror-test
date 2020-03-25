@@ -2,13 +2,13 @@ stages:
   - deploy
 
 Deploy:
-  image: appropriate/curl
   stage: deploy
   variables:
     TEST: $CI_COMMIT_TAG
   script:
     - echo "$TEST"
     - ln -s README.md link.md
+    - cat link.md
   artifacts:
     paths:
         - link.md
