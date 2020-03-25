@@ -9,7 +9,6 @@ Deploy:
   script:
     - echo "$TEST"
     - ln -s README.md link.dm
-  artifact:
+  artifacts:
     paths:
         - link.md
-    
