@@ -7,7 +7,7 @@ Deploy:
     TEST: $CI_COMMIT_TAG
   script:
     - echo "$TEST"
-    - ln -s README.md link.md
+    - ln README.md link.md
     - cat link.md
   artifacts:
     paths:
